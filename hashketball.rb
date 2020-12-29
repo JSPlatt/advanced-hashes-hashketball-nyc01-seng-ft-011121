@@ -181,7 +181,16 @@ end
 
 #def player_stats(player_name)
 	#stuck on this one 
-
+def player_stats(name)
+  stats = {}
+  game_hash.each do |team, team_attributes|
+    team_attributes[:players].each do |player|
+      if name == player[:player_name]
+        stats.merge!(player)
+      end
+    end
+  end
+  stats
   
 	
 

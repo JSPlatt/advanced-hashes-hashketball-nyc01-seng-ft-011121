@@ -181,15 +181,16 @@ end
 
 #def player_stats(player_name)
 	#stuck on this one 
-def player_stats(name)
-   game_hash.each do |location, team_data|
-      team_data[:players].each do |player_name, value|
-         if player_name == name
-            return value
-         end
-      end
-   end
-end	
+def player_stats(player_name, hashketball)
+  player_name.capitalize!
+  if hashketball[:home][:players].include?(player_name)
+    hashketball[:home][:players][player_name][:stats]
+  elsif hashketball[:away][:players].include?(player_name)
+    hashketball[:away][:players][player_name][:stats]
+  else
+    "No player found."
+  end
+end
 	
 
 def big_shoe_rebounds

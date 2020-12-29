@@ -181,15 +181,11 @@ end
 
 #def player_stats(player_name)
 	#stuck on this one 
-	def player_stats(player)
-  game_hash.each do |location, team|
-    team.each do |stat_cat, stat|
-      if stat_cat.to_s == "players"
-        stat.each do |name, player_stat|
-          if name == player
-            return player_stat
-          end
-        end
+def player_stats(name)
+  game_hash.each do |team, team_data|
+    team_data.each do |team_datum, attribute|
+      if team_datum == :players && attribute.has_key?(name)
+        return attribute[name]
       end
     end
   end

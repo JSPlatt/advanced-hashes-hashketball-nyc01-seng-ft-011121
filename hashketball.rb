@@ -179,8 +179,6 @@ def player_numbers(input)
 end
 
 
-#def player_stats(player_name)
-	#stuck on this one 
 def player_stats(name)
   stats = {}
   game_hash.each do |team, team_attributes|

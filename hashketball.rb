@@ -181,11 +181,15 @@ end
 
 #def player_stats(player_name)
 	#stuck on this one 
-	def player_stats(player_n)
-  game_hash.each do |home_away, keys|
-    keys[:players].each do |player|
-      if player[:player_name] == player_n
-        return player.delete_if { |stat, value| [:player_name].include?(stat)}
+	def player_stats(player)
+  game_hash.each do |location, team|
+    team.each do |stat_cat, stat|
+      if stat_cat.to_s == "players"
+        stat.each do |name, player_stat|
+          if name == player
+            return player_stat
+          end
+        end
       end
     end
   end

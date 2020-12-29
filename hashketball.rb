@@ -187,8 +187,6 @@ def player_stats(player_name, hashketball)
     hashketball[:home][:players][player_name][:stats]
   elsif hashketball[:away][:players].include?(player_name)
     hashketball[:away][:players][player_name][:stats]
-  else
-    "No player found."
   end
 end
 	

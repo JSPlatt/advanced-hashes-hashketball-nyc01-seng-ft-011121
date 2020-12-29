@@ -179,16 +179,10 @@ def player_numbers(input)
 end
 
 
-#def player_stats(player_name)
+def player_stats(player_name)
 	#stuck on this one 
-def player_stats(player_name, hashketball)
-  player_name.capitalize!
-  if hashketball[:home][:players].include?(player_name)
-    hashketball[:home][:players][player_name][:stats]
-  elsif hashketball[:away][:players].include?(player_name)
-    hashketball[:away][:players][player_name][:stats]
-  end
-end
+
+  
 	
 
 def big_shoe_rebounds

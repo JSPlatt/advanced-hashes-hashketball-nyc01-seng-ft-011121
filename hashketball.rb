@@ -193,7 +193,6 @@ ef player_stats(player)
         end
       end
     end
-  end
   stats_hash
 end
 

@@ -181,7 +181,7 @@ end
 
 #def player_stats(player_name)
 	#stuck on this one 
-ef player_stats(player)
+def player_stats(player)
   stats_hash = {}
   game_hash.each do |team, attributes|
     game_hash[team].each do |attribute, value|
@@ -193,6 +193,7 @@ ef player_stats(player)
         end
       end
     end
+  end
   stats_hash
 end
 
